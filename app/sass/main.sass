@@ -1,0 +1,885 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+h1
+  font:
+    family: 'al-bold', sans-serif
+    size: 80px
+  color: #fff
+
+h2
+  color: #23262d
+  font:
+    family: 'al-bold', sans-serif
+    size: 36px
+
+.phone
+  color: #fff
+  font:
+    family: 'al-black', sans-serif
+    size: 28px
+  &:hover
+    color: $accent
+
+a
+  transition: .3s ease
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    color: $accent
+
+.container
+  max-width: 1190px
+
+.links-accent
+  color: #ff6600
+  font-size: 14px
+  border-bottom: 1px dotted #ff6600
+  &:hover
+    color: #fff
+
+button, select, input
+  outline: none
+  border: none
+  transition: .3s ease
+
+//social
+.list-social
+  display: flex
+  align-items: center
+  li
+
+    a
+      padding: 0 18px 0
+      display: flex
+      align-items: center
+      justify-content: center
+
+
+.list-phone
+  display: flex
+  align-items: center
+  position: relative
+  padding: 0 0 0 48px
+  li
+    &:first-child
+      margin: 0 10px 0 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 28px
+    height: 28px
+    background: url("../img/phone.png") no-repeat center
+      size: cover
+
+
+//menu
+.main-menu
+  padding: 0
+  .navbar-nav
+    .nav-item
+      &:first-child
+        .nav-link
+          padding-left: 0
+      &:last-child
+        .nav-link
+          padding-right: 0
+          &:before
+            display: none
+      .nav-link
+        padding: 0 47px
+        color: #fff
+        font-size: 14px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        &:hover
+          color: $accent
+        &:before
+          content: ''
+          position: absolute
+          right: 0
+          top: 50%
+          transform: translate(0,-50%)
+          background-color: #41547e
+          width: 1px
+          height: 11px
+
+.logo
+  display: flex
+  align-items: center
+  color: #fff
+  .logo-image
+    width: 87px
+    min-width: 87px
+    margin: 0 23px 0 0
+  .logo-text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    .logo-text__title
+      font:
+        size: 30px
+        family: 'al-bold', sans-serif
+      border-bottom: 1px solid #fa5e19
+    .logo-text__description
+      font-size: 13px
+      margin: 6px 0 0 0
+
+
+.box-phone-wrapper
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-end
+
+.list-phone
+  li
+    a
+      color: #fff
+
+.btn-accent
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #ffffff
+  text-transform: uppercase
+  font-size: 15px
+  padding: 20px 53px
+  background-image: linear-gradient(-45deg, #bb4511 0%, #ff5600 100%)
+  border-radius: 30px
+  width: fit-content
+  &:hover
+    color: $bg
+
+
+header
+  background: $bg
+  padding: 29px 0 17px
+  .phone, .logo
+    display: none
+
+main
+  background: url("../img/bg1.jpg") no-repeat center
+    size: cover
+  padding: 52px 0 149px
+  .title
+    width: 100%
+    margin: 68px 0 78px
+    p
+      font:
+        size: 55px
+        family: 'al', sans-serif
+      color: #ffffff
+      margin: 13px 0 0 73px
+  .list-social
+    display: none
+
+.main-price
+  display: flex
+  flex-direction: column
+  color: #fff
+  .main-price__top
+    display: flex
+    align-items: flex-start
+  .description
+    max-width: 300px
+    padding: 0 0 0 20px
+    box-sizing: border-box
+    font-size: 15px
+    line-height: 23px
+    border-left: 1px solid rgba(#fff, .2)
+
+
+
+.price-wrapper
+  margin: 0 34px 0 0
+  p
+    text-transform: uppercase
+    font-size: 18px
+    margin: 0 0 16px
+
+.price
+  display: flex
+  align-items: center
+  p
+    font-size: 127px
+    margin: 0 32px 0 0
+    font-family: 'alterna', sans-serif
+
+
+//section advantages
+#advantages
+  background: url("../img/bg3.jpg") no-repeat center
+    size: cover
+  .container
+    color: #fff
+  .col-12.col-md-4
+    &:last-child
+      .advantages-box
+        &:before
+          display: none
+
+
+.advantages-box
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  padding: 66px 0 69px
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0,-50%)
+    background-color: #ffcc00
+    width: 3px
+    height: 3px
+    border-radius: 50%
+  .icon
+    width: 55px
+    margin: 0 30px 0 0
+    position: relative
+    z-index: 3
+  p
+    position: relative
+    z-index: 3
+    max-width: 196px
+    font:
+      size: 21px
+      family: 'al-bold', sans-serif
+
+
+
+//section types-of-jobs
+#types-of-jobs
+  background: url("../img/bg2.jpg") no-repeat center
+    size: cover
+  overflow: hidden
+  .container
+    position: relative
+    padding: 113px 15px 57px
+  .title
+    display: flex
+    flex-direction: column
+    max-width: 354px
+    p
+      font-size: 15px
+      margin: 10px 0 30px 0
+
+      color: #000
+  .btn-accent
+    position: absolute
+    top: 274px
+    left: 15px
+
+.types-of-jobs__content
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.types-of-jobs-box
+  margin: 0 0 100px
+  display: flex
+  align-items: flex-start
+  position: relative
+  padding: 63px 150px 20px 40px
+  width: 527px
+  height: 219px
+  border: 9px solid #ff5500
+  background: #f0f4fd
+  box-sizing: border-box
+  z-index: 2
+  &:before
+    content: ''
+    position: absolute
+    top: 40%
+    left: -200px
+    background: url("../img/arr-line.png") no-repeat center
+      size: contain
+    width: 131px
+    height: 13px
+    z-index: 1
+  span.triangle
+    width: 0
+    height: 0
+    display: block
+    position: absolute
+    top: 56px
+    left: -42.5px
+    border-top: 65px solid #f0f4fd
+    border-left: 43px solid transparent
+    &:before
+      content: ''
+      width: 39px
+      height: 9px
+      display: block
+      position: absolute
+      top: -65px
+      left: -39px
+      background: #ff5500
+      border-radius: 0 0 10px 0
+    &:after
+      content: ''
+      height: 78px
+      width: 9px
+      display: block
+      position: absolute
+      top: -70.5px
+      left: -26px
+      background:  #ff5500
+      transform: rotate(-30deg) skewY(32deg)
+      border-radius: 0 0 10px 0
+  .image
+    position: absolute
+    right: -30px
+    bottom: 0
+    z-index: 2
+  h3
+    color: #1d2943
+    text-transform: uppercase
+    font:
+      size: 24px
+      family: 'al-bold', sans-serif
+    margin: 0 0 10px
+  p
+    max-width: 250px
+    font-size: 15px
+
+.types-of-jobs-box2
+  &:before
+    left: auto
+    right: -18%
+    top: -80%
+    background: url("../img/arr-line2.png") no-repeat center
+      size: contain
+    width: 93px
+    height: 92px
+  span.triangle
+    left: auto
+    right: -43px
+    top: 40px
+    transform: scale(-1, 1)
+    border-top-color: transparent
+    z-index: 2
+  .image
+    right: -19px
+
+.types-of-jobs-box3
+  &:before
+    left: -32%
+  span.triangle
+    top: -54px
+    left: 62px
+    transform: scale(-1, 1) rotate(90deg)
+
+//section workers
+#workers
+  background: url("../img/bg4.jpg") no-repeat center
+    size: cover
+  position: relative
+  padding: 108px 0 91px
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    background: url("../img/men.png") no-repeat center
+      size: contain
+    width: 1074px
+    height: 1004px
+    z-index: 2
+  h2
+    max-width: 385px
+    margin: 0 0 42px
+
+.workers-content
+  border-radius: 12px
+  background-color: #f0f4fd
+  padding: 47px 41px
+  box-sizing: border-box
+
+.list-check
+  margin: 0 28px 0 0
+  &:last-child
+    margin: 0
+  li
+    position: relative
+    padding: 0 10px 5px 35px
+    font-size: 19px
+    color: #000
+    font-family: 'al-bold', sans-serif
+    margin: 0 0 12px
+    span
+      border-bottom: 2px dotted rgba(#020202, .3)
+      width: 100%
+      display: inline-block
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0,-50%)
+      background: url("../img/check.png") no-repeat center
+        size: contain
+      width: 24px
+      height: 24px
+
+.list-of-works
+  display: flex
+  align-items: flex-start
+  z-index: 2
+  position: relative
+
+
+.workers-slider
+  position: relative
+  z-index: 2
+  width: 100%
+  border-radius: 12px
+  background-color: #f0f4fd
+  margin: 106px 0 0
+  padding: 30px
+  box-sizing: border-box
+  .carousel_item
+    width: 374px
+    height: 337px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    img
+      height: 100%
+      max-width: none
+      width: auto
+
+.owl-carousel
+  .owl-nav
+    button.owl-prev, button.owl-next
+      outline: none
+      width: 65px
+      height: 65px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      background-color: #343c52
+      position: absolute
+      z-index: 2
+      top: 50%
+      transform: translate(0,-50%)
+      &:hover
+        background: $accent
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        background: url('../img/arrow-left.png') no-repeat center
+          size: contain
+        width: 13px
+        height: 22px
+    button.owl-prev
+      left: 12px
+    button.owl-next
+      right: 12px
+      left: auto
+      &:before
+        background: url('../img/arrow-right.png') no-repeat center
+          size: contain
+  .owl-dots
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    bottom: 0
+    margin: 0
+    padding: 0 0 0 30px
+    box-sizing: border-box
+    button.owl-dot
+      outline: none
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background-color: #c0b9b6
+      margin: 0 11px 0 0
+      &:last-child
+        margin: 0
+      span
+        display: none
+    button.owl-dot.active
+      background-color: $accent
+
+
+
+//section callback
+.callback
+  background: url("../img/bg5.jpg") no-repeat center
+    size: cover
+  color: #fff
+  padding: 90px 0 153px
+  .container
+    h2
+      color: #fff
+    .title
+      p
+        font-size: 18px
+        margin: 8px 0 0 0
+    form
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      width: 100%
+      margin: 64px 0 0 0
+      input[type='submit']
+        margin: 0 0 0 24px
+      label
+        display: block
+        width: 261px
+        height: 56px
+        margin: 0 18px 0 0
+        input
+          width: 100%
+          height: 100%
+          background: #fff
+          padding: 0 32px
+          box-sizing: border-box
+          border-radius: 24px
+          color: #000000
+          font-size: 15px
+          font-family: $default-font
+          &::placeholder
+            color: #000
+      .description
+        margin: 40px 0 0 0
+        font-size: 14px
+        a
+          display: inline-block
+          border-style: solid
+
+#question
+  background: url("../img/bg6.jpg") no-repeat center
+    size: cover
+  position: relative
+  overflow: hidden
+  padding: 80px 0 270px
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 0
+    background: url("../img/decor4.png") no-repeat center
+      size: contain
+    width: 983px
+    height: 458px
+  .title
+    max-width: 355px
+    margin: 0 0 45px
+    p
+      font-size: 15px
+
+.question-wrapper
+  position: relative
+
+
+.list-question-answer
+  display: flex
+  flex-direction: column
+  li.active
+    .question-title
+      color: $accent
+      &:after
+        background: url("../img/question.png") no-repeat center
+          size: contain
+    .answer
+      opacity: 1
+      visibility: visible
+  li
+    margin: 0 0 30px 0
+    cursor: pointer
+    &:last-child
+      margin: 0
+    .question-title
+      display: flex
+      align-items: center
+      max-width: 570px
+      position: relative
+      font:
+        family: 'al-bold', sans-serif
+        size: 21px
+      padding: 0 0 0 45px
+      box-sizing: border-box
+      transition: .3s ease
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: -3px
+        background: url("../img/question-black.png") no-repeat center
+          size: contain
+        width: 27px
+        height: 27px
+      p
+        position: relative
+        padding: 0 20px 5px 0
+        box-sizing: border-box
+        width: 100%
+        border-bottom: 1px dotted #020202
+        &:before
+          content: ''
+          position: absolute
+          top: 50%
+          transform: translate(0,-50%)
+          right: 0
+          background: url("../img/arrow.png") no-repeat center
+            size: contain
+          width: 20px
+          height: 20px
+
+
+.answer
+  display: flex
+  opacity: 0
+  visibility: hidden
+  align-items: flex-start
+  padding: 52px 50px
+  width: 523px
+  //height: 337px
+  border: 9px solid #ff5500
+  background: #f0f4fd
+  box-sizing: border-box
+  z-index: 2
+  float: right
+  font-size: 15px
+  position: absolute
+  right: 0
+  top: -30px
+  transition: .3s ease
+  span.triangle
+    width: 0
+    height: 0
+    display: block
+    position: absolute
+    top: 15%
+    left: -43px
+    border-top: 65px solid #f0f4fd
+    border-left: 43px solid transparent
+    &:before
+      content: ''
+      width: 39px
+      height: 9px
+      display: block
+      position: absolute
+      top: -65px
+      left: -39px
+      background: #ff5500
+      border-radius: 0 0 10px 0
+    &:after
+      content: ''
+      height: 78px
+      width: 9px
+      display: block
+      position: absolute
+      top: -70.5px
+      left: -26px
+      background:  #ff5500
+      transform: rotate(-30deg) skewY(32deg)
+      border-radius: 0 0 10px 0
+
+//footer
+footer
+  background: url("../img/bg7.jpg") no-repeat center
+    size: cover
+  box-sizing: border-box
+  position: relative
+  .container
+    position: relative
+    padding: 30px 15px 58px
+    color: #fff
+    display: flex
+    align-items: flex-start
+    &:before
+      content: ''
+      position: absolute
+      right: -35px
+      bottom: 0
+      background: url("../img/men2.png") no-repeat center
+        size: contain
+      height: 705px
+      width: 438px
+      z-index: 2
+  .logo
+    padding: 0 22px 0 0
+    margin: 0 24px 0 0
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 15px
+      width: 1px
+      height: 80%
+      background: #374666
+    .logo-text
+      max-width: 119px
+      .logo-text__title
+        font-size: 19px
+  .list-social
+    justify-content: flex-end
+    margin: 38px 38px 0 0
+    li
+      a
+        padding: 0 12px
+  .footer-box__bottom
+    margin: 50px 0 0 0
+    display: flex
+    align-items: flex-start
+    width: 100%
+    .list-phone
+      padding: 0
+      &:before
+        display: none
+  .phone
+    font-size: 25px
+  .links-accent
+    font-size: 13px
+    font-weight: 300
+
+
+.footer-box
+  display: flex
+  flex-direction: column
+  .description
+    max-width: 443px
+    padding: 15px 0 0 0
+    font-size: 15px
+
+.copyright
+  color: #ff6633
+  font-size: 13px
+  padding: 0 0 0 108px
+
+.logo-developer
+  display: flex
+  align-items: flex-start
+  margin: 0 0 0 20px
+  position: relative
+  z-index: 2
+  .logo-image
+    width: 39px
+    min-width: 39px
+    margin: 0 10px 0 0
+  .logo-text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    color: #fff
+    font:
+      family: 'myriad', sans-serif
+    .logo-text__title
+      text-transform: uppercase
+      font:
+        size: 17px
+        family: 'myriad-b', sans-serif
+      letter-spacing: 0.66px
+    .logo-text__description
+      font-size: 12px
+      color: #ff6633
+      max-width: 140px
+
+.navbar-collapse
+  flex-grow: initial
+
+.btn-close
+  display: none
+
+@import "media"
+// Всегда в конце
